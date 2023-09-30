@@ -14,7 +14,7 @@ public class BasicMecanumTeleOp extends LinearOpMode {
     private final  org.firstinspires.ftc.teamcode.Call_Upon_Classes.ServoTest servo = new ServoTest();
     public void runOpMode() throws InterruptedException {
         //init
-        driveMotors.init_drive_motors(hardwareMap);
+        //driveMotors.init_drive_motors(hardwareMap);
         servo.init_servo(hardwareMap);
         waitForStart();
         while(opModeIsActive()){

@@ -15,7 +15,7 @@ public class ServoTest {
     private boolean testmode = false;
     //lift:  set 0 as intake; set 0.5 as up then get pwm for 135 past up then set that as "mpl"
     //intake: set 0 as toward bot and check that 0.6 is directly away
-    private Servo ls;
+        private Servo ls;
     private Servo is;
     private double rt;
     private double lt;
@@ -25,8 +25,8 @@ public class ServoTest {
     private boolean b;
     private boolean x;
     private boolean y;
-    private double mdl = 270;
-    private double mpl = 0.928;
+    private double mdl =270;
+    private double mpl = 1;
     private double mdi = 300;
     private double mpi = 1;
     private double ms = 1;
@@ -47,8 +47,8 @@ public class ServoTest {
         FtcDashboard dashboard = FtcDashboard.getInstance();
         telemetry = new MultipleTelemetry(telemetry, FtcDashboard.getInstance().getTelemetry());
         //control definition
-        rt = gamepad1.right_trigger;
-        lt = gamepad1.left_trigger;
+//        rt = gamepad1.right_trigger;
+//        lt = gamepad1.left_trigger;
         a = gamepad1.a;
         b = gamepad1.b;
         x = gamepad1.x;
@@ -81,7 +81,7 @@ public class ServoTest {
                 lsp -= ms;
             }
             if (lsp>135){
-                isp = -lsp +375;
+                isp = -lsp +345;
                 test3 = true;
             }else {
                 isp = 180;
